@@ -1,8 +1,8 @@
 # my_tweak_circuits
 Tweak circuits designed in VHDL/Verilog like CDC synchronizers, edge detectors, pulse generators etc.
 
-Source codes for
-----------------
+Source codes
+------------
 -- Multi-flop Synchronizer
 
 -- Asynchronous Reset Synchronizer
