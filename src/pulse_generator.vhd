@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------------------------------------------
--- Design Name    : Clock Divider   
--- Description    : Configurable Clock Divider         
+-- Design Name    : Pulse Generator   
+-- Description    : Generates a pulse of one cycle at user defined intervals.     
 -- Date           : 14-02-2021
 -- Designed By    : Mitu Raj, iammituraj@gmail.com
 -- Comments       : -
@@ -15,16 +15,16 @@ use IEEE.STD_LOGIC_1164.all ;
 --------------------------------------------------------------------------------------------------------------------
 -- ENTITY DECLARATION
 --------------------------------------------------------------------------------------------------------------------
-Entity clock_divider is
+Entity pulse_generator is
 
     Generic (
-               DV            : natural := 4         -- Clock division factor > 1, multiples of 2
+               PERIOD        : natural := 4         -- Interval of how many clock cycles, > 1
             ) ;     
 
     Port    ( 
                clk           : in  std_logic  ;     -- Clock
                rstn          : in  std_logic  ;     -- Synchronous Reset
-               clk_o         : out std_logic        -- Divided Clock out
+               pulse_o       : out std_logic        -- Pulse out
             ) ;
 
 end Entity ;
@@ -32,15 +32,15 @@ end Entity ;
 --------------------------------------------------------------------------------------------------------------------
 -- ARCHITECTURE DEFINITION
 --------------------------------------------------------------------------------------------------------------------
-Architecture Behavioral of clock_divider is
+Architecture Behavioral of pulse_generator is
 
 -- Internal signals/registers
-signal clk_rg : std_logic                   ;        -- Clock out register
-signal count  : integer range 0 to DV/2 - 1 ;        -- Counter
+signal pulse_rg : std_logic                   ;        -- Pulse out register
+signal count    : integer range 0 to PERIOD-1 ;        -- Counter
 
 begin
 
--- Clock divider process
+-- Pulse generator process
 process (clk)
 begin
    
@@ -48,16 +48,17 @@ begin
       
       if rstn = '0' then
          
-         clk_rg <= '0';
-         count  <= 0  ;
+         pulse_rg <= '0';
+         count    <= 0  ;
 
       else    
-
-         if (count = DV/2 - 1) then
-            count  <= 0          ;
-            clk_rg <= not clk_rg ;
+         
+         if (count = PERIOD-1) then
+            count    <= 0         ;
+            pulse_rg <= '1'       ;
          else
-            count  <= count + 1  ;                              	                     
+            pulse_rg <= '0'       ;         
+            count    <= count + 1 ;                              	                     
          end if ;
 
       end if ;
@@ -66,8 +67,8 @@ begin
 
 end process ;
 
--- Clock out
-clk_o <= clk_rg ;
+-- Pulse out
+pulse_o <= pulse_rg ;
 
 end Architecture ;
 
