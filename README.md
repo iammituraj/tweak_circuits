@@ -1,4 +1,4 @@
-# my_tweak_circuits
+# Tweak_circuits
 Tweak circuits designed in VHDL/Verilog like CDC synchronizers, edge detectors, pulse generators etc.
 
 Source codes included
