@@ -18,4 +18,4 @@ Source codes for
 -- Edge Detector
 
 
-## All codes are fully synthesizable and open-source codes.
+All codes are fully synthesizable and open-source codes.
