@@ -11,11 +11,15 @@ Source codes included
 
 -- Pulse Synchronizer
 
+-- Reset Stretcher
+
 -- Edge Detector
 
 -- Clock Divider
 
 -- Pulse Generator
+
+-- Clock Gate
 
 Comments
 --------
