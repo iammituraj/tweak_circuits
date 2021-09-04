@@ -17,6 +17,8 @@ Source codes included
 
 -- Reset Stretcher
 
+-- Min Width Resetter
+
 -- Clock Divider
 
 -- Pulse Generator
