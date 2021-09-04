@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------------------------------------------
 -- Design Name    : Minimum Width Reset Validator and Generator   
 -- Description    : Reset is asserted only if a minimum width reset pulse is applied at the input.
---                  Configurable no. of flip-flops in the stretcher chain.        
+--                  Configurable no. of flip-flops in the reset validator chain.        
 -- Date           : 16-02-2021
 -- Designed By    : Mitu Raj, iammituraj@gmail.com
 -- Comments       : Attributes make sure that the flops are placed close to each other on FPGA.
@@ -20,7 +20,7 @@ Entity min_width_reset is
 
     Generic (
                PERIOD      : natural   := 4   ;     -- Min. no. of cycles reset has to be asserted
-               RST_POL     : std_logic := '1'       -- Polarity of Synchronous Reset   
+               RST_POL     : std_logic := '0'       -- Polarity of Synchronous Reset   
             ) ;     
 
     Port    ( 
@@ -37,7 +37,7 @@ end Entity ;
 Architecture behavioral of min_width_reset is
 
 --------------------------------------------------------------------------------------------------------------------
--- Stretcher Chain : Synchronous Chain of Flip-Flops
+-- Validator Chain : Synchronous Chain of Flip-Flops
 --------------------------------------------------------------------------------------------------------------------
 signal flipflops : std_logic_vector (PERIOD-1 downto 0) ;
 --------------------------------------------------------------------------------------------------------------------
@@ -67,22 +67,23 @@ begin
    end if ;
 
 end process ;
+   
+temp (0) <= flipflops (0) ;
 
-   temp (0) <= flipflops (0) ;
+gen: for i in 1 to PERIOD-1 generate
 
-   gen: for i in 1 to PERIOD-1 generate
+     ACTV_HIGH_RST : if RST_POL = '1' generate   
+                        temp (i) <= temp (i-1) and flipflops (i) ;
+                     end generate ;
 
-        ACTV_HIGH_RST : if RST_POL == 1 generate   
-                           temp (i) <= temp (i-1) and flipflops (i) ;
-                        end generate ;
+     ACTV_LOW_RST  : if RST_POL = '0' generate   
+                        temp (i) <= temp (i-1) or flipflops (i)  ;
+                     end generate ;   
 
-        ACTV_LOW_RST  : if RST_POL == 0 generate   
-                           temp (i) <= temp (i-1) or flipflops (i)  ;
-                        end generate ;   
+end generate ; 
 
-   end generate ; 
-
-   rst_o <= temp (N-1) ;
+-- Reset out
+rst_o <= temp (PERIOD-1) ;
 
 end Architecture ;
 
