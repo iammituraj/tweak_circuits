@@ -28,7 +28,7 @@ end Entity ;
 --------------------------------------------------------------------------------------------------------------------
 -- ARCHITECTURE DEFINITION
 --------------------------------------------------------------------------------------------------------------------
-Architecture Behavioral of clock_gate is
+Architecture behavioral of clock_gate is
 
 -- Latched Gate Enable signal
 signal en_latched : std_logic ;

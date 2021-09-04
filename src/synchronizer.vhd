@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------------------------------------------
 -- Design Name    : Single-bit Synchroniser for Clock Domain Crossing   
--- Description    : - To synchronise control signals of one bit between clock domains
---                  - Configurable no. of flip-flops in the synchroniser chain         
+-- Description    : To synchronise control signals of one bit between clock domains.
+--                  Configurable no. of flip-flops in the synchroniser chain.         
 -- Date           : 05-07-2019
 -- Designed By    : Mitu Raj, iammituraj@gmail.com
 -- Comments       : Attributes are important for proper FPGA implementation, cross check synthesised design
@@ -10,31 +10,34 @@
 --------------------------------------------------------------------------------------------------------------------
 -- LIBRARIES
 --------------------------------------------------------------------------------------------------------------------
-Library IEEE;
-use IEEE.STD_LOGIC_1164.all;
+Library IEEE                ;
+use IEEE.STD_LOGIC_1164.all ;
 
 --------------------------------------------------------------------------------------------------------------------
 -- ENTITY DECLARATION
 --------------------------------------------------------------------------------------------------------------------
 Entity synchronizer is
+
     Generic (STAGES : natural := 2)     ;     -- Recommended 2 flip-flops for low speed designs; >2 for high speed
+
     Port ( 
           clk           : in std_logic  ;     -- Clock
           rstn          : in std_logic  ;     -- Synchronous Reset
           async_sig_i   : in std_logic  ;     -- Asynchronous signal in
           sync_sig_o    : out std_logic       -- Synchronized signal out
-          );
-end synchronizer;
+          ) ;
+
+end synchronizer ;
 
 --------------------------------------------------------------------------------------------------------------------
 -- ARCHITECTURE DEFINITION
 --------------------------------------------------------------------------------------------------------------------
-Architecture Behavioral of synchronizer is
+Architecture behavioral of synchronizer is
 
 --------------------------------------------------------------------------------------------------------------------
 -- Synchronisation Chain of Flip-Flops
 --------------------------------------------------------------------------------------------------------------------
-signal flipflops : std_logic_vector(STAGES-1 downto 0);
+signal flipflops : std_logic_vector(STAGES-1 downto 0) ;
 --------------------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------------------
@@ -44,8 +47,8 @@ signal flipflops : std_logic_vector(STAGES-1 downto 0);
 -- Maximise MTBF while place and route.
 -- Altera has different attributes.
 --------------------------------------------------------------------------------------------------------------------
-attribute ASYNC_REG : string;
-attribute ASYNC_REG of flipflops: signal is "true";
+attribute ASYNC_REG              : string           ;
+attribute ASYNC_REG of flipflops : signal is "true" ;
 --------------------------------------------------------------------------------------------------------------------
 
 begin   
@@ -63,9 +66,9 @@ begin
              end process;
 
    -- Synchronised signal out
-   sync_sig_o <= flipflops(flipflops'high);
+   sync_sig_o <= flipflops(flipflops'high) ;
 
-end Behavioral;
+end behavioral ;
 
 --------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------

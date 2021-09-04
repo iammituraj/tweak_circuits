@@ -1,8 +1,8 @@
 --------------------------------------------------------------------------------------------------------------------
 -- Design Name    : Handshake-based Pulse/Toggle Synchroniser for Clock Domain Crossing   
--- Description    : - Synchronises single-cycle pulse from Clock domain A to Clock domain B
---                  - Handshake-based synchroniser for safe and reliable transfers
---                  - Configurable no. of flip-flops in the synchroniser chains         
+-- Description    : Synchronises single-cycle pulse from Clock domain A to Clock domain B.
+--                  Handshake-based synchroniser for safe and reliable transfers.
+--                  Configurable no. of flip-flops in the synchroniser chains.         
 -- Date           : 13-02-2021
 -- Designed By    : Mitu Raj, iammituraj@gmail.com
 -- Comments       : Attributes are important for proper FPGA implementation, cross check synthesised design
@@ -38,7 +38,7 @@ end Entity;
 --------------------------------------------------------------------------------------------------------------------
 -- ARCHITECTURE DEFINITION
 --------------------------------------------------------------------------------------------------------------------
-Architecture Behavioral of pulse_sync is
+Architecture behavioral of pulse_sync is
 
 --------------------------------------------------------------------------------------------------------------------
 -- Synchronisation Chain of Flip-Flops

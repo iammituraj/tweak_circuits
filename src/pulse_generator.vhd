@@ -32,7 +32,7 @@ end Entity ;
 --------------------------------------------------------------------------------------------------------------------
 -- ARCHITECTURE DEFINITION
 --------------------------------------------------------------------------------------------------------------------
-Architecture Behavioral of pulse_generator is
+Architecture behavioral of pulse_generator is
 
 -- Internal signals/registers
 signal pulse_rg : std_logic                   ;        -- Pulse out register

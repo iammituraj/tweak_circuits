@@ -32,7 +32,7 @@ end Entity ;
 --------------------------------------------------------------------------------------------------------------------
 -- ARCHITECTURE DEFINITION
 --------------------------------------------------------------------------------------------------------------------
-Architecture Behavioral of clock_divider is
+Architecture behavioral of clock_divider is
 
 -- Internal signals/registers
 signal clk_rg : std_logic                   ;        -- Clock out register

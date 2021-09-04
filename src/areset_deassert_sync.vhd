@@ -1,6 +1,7 @@
 --------------------------------------------------------------------------------------------------------------------
 -- Design Name    : Synchroniser for de-assertion of Asynchronous Reset   
--- Description    : Configurable no. of flip-flops in the synchroniser chain         
+-- Description    : Synchronises de-assertion of Asynchronous Reset to a clock domain.
+--                  Configurable no. of flip-flops in the synchroniser chain, Reset polarity.         
 -- Date           : 13-02-2021
 -- Designed By    : Mitu Raj, iammituraj@gmail.com
 -- Comments       : Attributes are important for proper FPGA implementation, cross check synthesised design
@@ -69,7 +70,7 @@ end process ;
 -- Reset out with synchronized de-assertion
 sync_rst_o <= flipflops(flipflops'high) ;
 
-end architecture ;
+end Architecture ;
 
 --------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------
