@@ -3,17 +3,19 @@ Tweak circuits designed in VHDL/Verilog like CDC synchronizers, edge detectors, 
 
 Source codes included
 ---------------------
--- Multi-flop Synchronizer
+-- Multi-flop Synchronizer for CDC
 
 -- Asynchronous Reset Synchronizer
 
 -- Asychronous Reset De-assertion Synchronizer
 
--- Pulse Synchronizer
+-- Pulse Synchronizer for CDC
 
--- Reset Stretcher
+-- Mux-based Data Synchronizer for CDC
 
 -- Edge Detector
+
+-- Reset Stretcher
 
 -- Clock Divider
 
