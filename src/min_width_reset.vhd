@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------------------------------------------
 -- Design Name    : Minimum Width Reset Validator and Generator   
 -- Description    : Reset is asserted only if a minimum width reset pulse is applied at the input.
---                  Configurable no. of flip-flops in the reset validator chain.        
+--                  Configurable no. of flip-flops in the pulse width validator chain.        
 -- Date           : 16-02-2021
 -- Designed By    : Mitu Raj, iammituraj@gmail.com
 -- Comments       : Attributes make sure that the flops are placed close to each other on FPGA.
@@ -37,7 +37,7 @@ end Entity ;
 Architecture behavioral of min_width_reset is
 
 --------------------------------------------------------------------------------------------------------------------
--- Validator Chain : Synchronous Chain of Flip-Flops
+-- Pulse Width Validator Chain : Synchronous Chain of Flip-Flops
 --------------------------------------------------------------------------------------------------------------------
 signal flipflops : std_logic_vector (PERIOD-1 downto 0) ;
 --------------------------------------------------------------------------------------------------------------------
