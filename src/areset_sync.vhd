@@ -3,7 +3,7 @@
 -- Description    : Synchronises Asynchronous Reset assertion and de-assertion to a clock domain.
 --                  Configurable no. of flip-flops in the synchroniser chain         
 -- Date           : 13-02-2021
--- Designed By    : Mitu Raj, iammituraj@gmail.com
+-- Designed By    : Mitu Raj, chip@chipmunklogic.com at Chipmunk Logic ™, https://chipmunklogic.com
 -- Comments       : Attributes are important for proper FPGA implementation, cross check synthesised design
 --------------------------------------------------------------------------------------------------------------------
 

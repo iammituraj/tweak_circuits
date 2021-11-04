@@ -2,7 +2,7 @@
 -- Design Name    : Clock Divider   
 -- Description    : Configurable Clock Divider         
 -- Date           : 14-02-2021
--- Designed By    : Mitu Raj, iammituraj@gmail.com
+-- Designed By    : Mitu Raj, chip@chipmunklogic.com at Chipmunk Logic ™, https://chipmunklogic.com
 -- Comments       : -
 --------------------------------------------------------------------------------------------------------------------
 

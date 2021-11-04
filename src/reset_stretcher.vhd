@@ -3,7 +3,7 @@
 -- Description    : To stretch a synchronous reset by multiple clock cycles.
 --                  Configurable no. of flip-flops in the stretcher chain, Reset polarity.       
 -- Date           : 16-02-2021
--- Designed By    : Mitu Raj, iammituraj@gmail.com
+-- Designed By    : Mitu Raj, chip@chipmunklogic.com at Chipmunk Logic ™, https://chipmunklogic.com
 -- Comments       : Attributes make sure the flops are placed close to each other on FPGA.
 --------------------------------------------------------------------------------------------------------------------
 

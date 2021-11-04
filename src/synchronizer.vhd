@@ -3,7 +3,7 @@
 -- Description    : To synchronise control signals of one bit between clock domains.
 --                  Configurable no. of flip-flops in the synchroniser chain.         
 -- Date           : 05-07-2019
--- Designed By    : Mitu Raj, iammituraj@gmail.com
+-- Designed By    : Mitu Raj, chip@chipmunklogic.com at Chipmunk Logic ™, https://chipmunklogic.com
 -- Comments       : Attributes are important for proper FPGA implementation, cross check synthesised design
 --------------------------------------------------------------------------------------------------------------------
 

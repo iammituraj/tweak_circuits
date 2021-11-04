@@ -3,7 +3,7 @@
 -- Description    : To synchronise data between clock domains using data ready synchroniser + mux
 --                  Configurable no. of flip-flops in the synchroniser chain         
 -- Date           : 17-02-2021
--- Designed By    : Mitu Raj, iammituraj@gmail.com
+-- Designed By    : Mitu Raj, chip@chipmunklogic.com at Chipmunk Logic ™, https://chipmunklogic.com
 -- Comments       : Attributes are important for proper FPGA implementation, cross check synthesised design
 --------------------------------------------------------------------------------------------------------------------
 

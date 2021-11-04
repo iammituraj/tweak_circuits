@@ -2,7 +2,7 @@
 -- Design Name    : Pulse Generator   
 -- Description    : Generates a pulse of one cycle at user defined intervals.     
 -- Date           : 14-02-2021
--- Designed By    : Mitu Raj, iammituraj@gmail.com
+-- Designed By    : Mitu Raj, chip@chipmunklogic.com at Chipmunk Logic ™, https://chipmunklogic.com
 -- Comments       : -
 --------------------------------------------------------------------------------------------------------------------
 

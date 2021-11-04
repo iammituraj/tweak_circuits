@@ -2,7 +2,7 @@
 -- Design Name    : Clock Gate  
 -- Description    : Latch-based circuit to gate input clock and generate a gated clock.       
 -- Date           : 16-02-2021
--- Designed By    : Mitu Raj, iammituraj@gmail.com
+-- Designed By    : Mitu Raj, chip@chipmunklogic.com at Chipmunk Logic ™, https://chipmunklogic.com
 -- Comments       : Not recommended to synthesise on FPGAs.
 --------------------------------------------------------------------------------------------------------------------
 

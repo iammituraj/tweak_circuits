@@ -4,7 +4,7 @@
 --                  Handshake-based synchroniser for safe and reliable transfers.
 --                  Configurable no. of flip-flops in the synchroniser chains.         
 -- Date           : 13-02-2021
--- Designed By    : Mitu Raj, iammituraj@gmail.com
+-- Designed By    : Mitu Raj, chip@chipmunklogic.com at Chipmunk Logic ™, https://chipmunklogic.com
 -- Comments       : Attributes are important for proper FPGA implementation, cross check synthesised design
 --------------------------------------------------------------------------------------------------------------------
 

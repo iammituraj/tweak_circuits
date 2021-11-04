@@ -2,7 +2,7 @@
 -- Design Name    : Edge Detector   
 -- Description    : Rising and Falling edge detector.        
 -- Date           : 05-07-2019
--- Designed By    : Mitu Raj, iammituraj@gmail.com
+-- Designed By    : Mitu Raj, chip@chipmunklogic.com at Chipmunk Logic ™, https://chipmunklogic.com
 -- Comments       : NIL
 --------------------------------------------------------------------------------------------------------------------
 
