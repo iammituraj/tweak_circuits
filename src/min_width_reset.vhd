@@ -4,7 +4,7 @@
 --                  Used for glitch filtering.
 --                  Configurable reset polarity, Configurable min. pulse width to be recognized at input.        
 -- Date           : 16-02-2021
--- Designed By    : Mitu Raj, iammituraj@gmail.com
+-- Designed By    : Mitu Raj, chip@chipmunklogic.com at Chipmunk Logic ™, https://chipmunklogic.com
 -- Comments       : Attributes make sure that the sync flops are placed close to each other on FPGA.
 --------------------------------------------------------------------------------------------------------------------
 
